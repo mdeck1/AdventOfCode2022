@@ -3,7 +3,6 @@ package com.malcolmdeck.adventofcode2022.levels.level2;
 import com.malcolmdeck.adventofcode2022.util.FileHelper;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Level2 {
@@ -17,6 +16,7 @@ public class Level2 {
                 String line = scanner.nextLine();
                 char opponentChoice = line.charAt(0);
                 char myChoice = line.charAt(2);
+                // Add points based on what I chose
                 switch (myChoice) {
                     case 'X':
                         score += 1;
@@ -30,6 +30,7 @@ public class Level2 {
                     default:
                         throw new RuntimeException("Unknown char thrown: " + myChoice);
                 }
+                //Compute if I won, lost, or drew and add those points.
                 switch (opponentChoice) {
                     case 'A':
                         if (myChoice == 'Y') {
@@ -72,6 +73,7 @@ public class Level2 {
                 String line = scanner.nextLine();
                 char opponentChoice = line.charAt(0);
                 char myChoice = line.charAt(2);
+                // Add points for win, loss, or draw.
                 switch (myChoice) {
                     case 'X':
                         score += 0;
@@ -85,6 +87,7 @@ public class Level2 {
                     default:
                         throw new RuntimeException("Unknown char thrown: " + myChoice);
                 }
+                // Compute what I threw and add its respective point score.
                 switch (opponentChoice) {
                     case 'A':
                         if (myChoice == 'X') {
