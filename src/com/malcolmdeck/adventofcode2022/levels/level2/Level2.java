@@ -72,9 +72,9 @@ public class Level2 {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 char opponentChoice = line.charAt(0);
-                char myChoice = line.charAt(2);
+                char gameOutcome = line.charAt(2);
                 // Add points for win, loss, or draw.
-                switch (myChoice) {
+                switch (gameOutcome) {
                     case 'X':
                         score += 0;
                         break;
@@ -85,39 +85,39 @@ public class Level2 {
                         score += 6;
                         break;
                     default:
-                        throw new RuntimeException("Unknown char thrown: " + myChoice);
+                        throw new RuntimeException("Unknown char thrown: " + gameOutcome);
                 }
                 // Compute what I threw and add its respective point score.
                 switch (opponentChoice) {
                     case 'A':
-                        if (myChoice == 'X') {
+                        if (gameOutcome == 'X') {
                             score += 3;
-                        } else if (myChoice == 'Y') {
+                        } else if (gameOutcome == 'Y') {
                             score += 1;
                         } else {
                             score += 2;
                         }
                         break;
                     case 'B':
-                        if (myChoice == 'X') {
+                        if (gameOutcome == 'X') {
                             score += 1;
-                        } else if (myChoice == 'Y') {
+                        } else if (gameOutcome == 'Y') {
                             score += 2;
                         } else {
                             score += 3;
                         }
                         break;
                     case 'C':
-                        if (myChoice == 'X') {
+                        if (gameOutcome == 'X') {
                             score += 2;
-                        } else if (myChoice == 'Y') {
+                        } else if (gameOutcome == 'Y') {
                             score += 3;
                         } else {
                             score += 1;
                         }
                         break;
                     default:
-                        throw new RuntimeException("Unknown char thrown: " + myChoice);
+                        throw new RuntimeException("Unknown char thrown: " + gameOutcome);
                 }
             }
             System.out.println("Score: " + score);
