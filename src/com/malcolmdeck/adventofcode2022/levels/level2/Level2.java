@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Level2 {
 
     public static void partOne() throws Exception {
-        File file = FileHelper.getFile("level1\\level2data.txt");
+        File file = FileHelper.getFile("level2\\level2data.txt");
         try {
             Scanner scanner = new Scanner(file);
             while (scanner.hasNextLine()) {
@@ -23,7 +23,7 @@ public class Level2 {
     }
 
     public static void partTwo() throws Exception {
-        File file = FileHelper.getFile("level1\\level2data.txt");
+        File file = FileHelper.getFile("level2\\level2data.txt");
         try {
             Scanner scanner = new Scanner(file);
             while (scanner.hasNextLine()) {
