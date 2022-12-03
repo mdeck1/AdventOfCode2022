@@ -68,6 +68,15 @@ public class Level3 {
         return;
     }
 
+    /**
+     * Returns the "priority" of a character as defined by:
+     * a = 1
+     * ...
+     * z = 26
+     * A = 27
+     * ...
+     * Z = 52
+     */
     private static int charToPriority(char a) {
         if (((int) a) > 96) {
             // Lower case
