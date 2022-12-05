@@ -97,7 +97,7 @@ public class Level4 {
 
     private static boolean isOverlapping(int firstLeft, int firstRight, int secondLeft, int secondRight) {
         return (firstLeft <= secondRight && firstRight >= secondLeft) ||
-                (secondLeft <= firstRight && secondRight >= firstLeft));
+                (secondLeft <= firstRight && secondRight >= firstLeft);
     }
 
 }

@@ -9,6 +9,6 @@ import com.malcolmdeck.adventofcode2022.levels.level5.Level5;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        Level5.partOne();
+        Level5.partTwo();
     }
 }
