@@ -3,8 +3,6 @@ package com.malcolmdeck.adventofcode2022.levels.level6;
 import com.malcolmdeck.adventofcode2022.util.FileHelper;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.PriorityQueue;
 import java.util.Scanner;
 
 public class Level6 {
