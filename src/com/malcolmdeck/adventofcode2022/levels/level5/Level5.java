@@ -103,9 +103,9 @@ public class Level5 {
                 int howMany = Integer.parseInt(commands[1]);
                 int fromStack = Integer.parseInt(commands[3]) - 1;
                 int toStack = Integer.parseInt(commands[5]) - 1;
-                Stack<Character> tempStack = new Stack<>();
                 // Crates move all at once; using an intermediary stack re-reverses them before insertion, so
                 // we can use partOne's solution with only 4 extra lines.
+                Stack<Character> tempStack = new Stack<>();
                 for (int i = 0; i < howMany; ++i) {
                     tempStack.push(
                             loadingDock.get(fromStack).pop());
