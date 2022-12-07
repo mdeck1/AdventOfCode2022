@@ -6,10 +6,11 @@ import com.malcolmdeck.adventofcode2022.levels.level3.Level3;
 import com.malcolmdeck.adventofcode2022.levels.level4.Level4;
 import com.malcolmdeck.adventofcode2022.levels.level5.Level5;
 import com.malcolmdeck.adventofcode2022.levels.level6.Level6;
+import com.malcolmdeck.adventofcode2022.levels.level7.Level7;
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        Level6.partTwo();
+        Level7.partOne();
     }
 }
