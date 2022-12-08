@@ -11,6 +11,7 @@ public class Level8 {
     public static void partOne() throws Exception {
         File file = FileHelper.getFile("level8\\level8data.txt");
         try {
+            // Read in file
             Scanner scanner = new Scanner(file);
             int WIDTH = 99;
             int HEIGHT = 99;
@@ -24,7 +25,7 @@ public class Level8 {
                 whichLine++;
             }
             boolean[][] treeVisible = new boolean[HEIGHT][WIDTH];
-            // top
+            // Look down each column from the top
             for (int i = 0; i < WIDTH; ++i) {
                 int tallestSoFar = -1;
                 for (int j = 0; j < HEIGHT; ++j) {
@@ -34,7 +35,7 @@ public class Level8 {
                     }
                 }
             }
-            // bottom
+            // Look up each column from the bottom
             for (int i = WIDTH - 1; i > -1; --i) {
                 int tallestSoFar = -1;
                 for (int j = HEIGHT - 1; j > -1; --j) {
@@ -44,7 +45,7 @@ public class Level8 {
                     }
                 }
             }
-            // left
+            // Look across each row from the left
             for (int i = 0; i < HEIGHT; ++i) {
                 int tallestSoFar = -1;
                 for (int j = 0; j < WIDTH; ++j) {
@@ -54,7 +55,7 @@ public class Level8 {
                     }
                 }
             }
-            // right
+            // Look across each row from the right
             for (int i = HEIGHT - 1; i > -1; --i) {
                 int tallestSoFar = -1;
                 for (int j = WIDTH - 1; j > -1; --j) {
@@ -64,6 +65,7 @@ public class Level8 {
                     }
                 }
             }
+            // Sum all visible trees
             int count = 0;
             for (int i = 0; i < HEIGHT; ++i) {
                 for (int j = 0; j < WIDTH; ++j) {
@@ -82,6 +84,7 @@ public class Level8 {
     public static void partTwo() throws Exception {
         File file = FileHelper.getFile("level8\\level8data.txt");
         try {
+            // Read in tree grid
             Scanner scanner = new Scanner(file);
             int WIDTH = 99;
             int HEIGHT = 99;
@@ -94,6 +97,7 @@ public class Level8 {
                 }
                 whichLine++;
             }
+            // Compute each scenic score, keeping track of the maximum as we go along
             int maxScore = -1;
             for (int i = 1; i < HEIGHT - 1; ++i) {
                 for (int j = 1; j < WIDTH - 1; ++j) {
@@ -110,6 +114,9 @@ public class Level8 {
         return;
     }
 
+    /**
+     * Compute the scenic score for the tree at index (x, y)
+     */
     private static int getScenicScore(int[][] treeGrid, int y, int x) {
         int HEIGHT = treeGrid.length;
         int WIDTH = treeGrid[0].length;
@@ -118,34 +125,35 @@ public class Level8 {
         int downScore = 0;
         int leftScore = 0;
         int rightScore = 0;
-        // Up
+        // Count the tree visible to the north of it
         for (int i = y-1; i > -1; --i) {
             upScore++;
             if (treeGrid[i][x] >= currentHeight) {
                 break;
             }
         }
-        // Down
+        // Count the trees visible to the south of it
         for (int i = y+1; i < HEIGHT; ++i) {
             downScore++;
             if (treeGrid[i][x] >= currentHeight) {
                 break;
             }
         }
-        // Left
+        // Count the trees visible to the west of it
         for (int i = x-1; i > -1; --i) {
             leftScore++;
             if (treeGrid[y][i] >= currentHeight) {
                 break;
             }
         }
-        // Right
+        // Count the trees visible to the east of it
         for (int i = x+1; i < WIDTH; ++i) {
             rightScore++;
             if (treeGrid[y][i] >= currentHeight) {
                 break;
             }
         }
+        // Return the four counts multiplied together to get the score.
         return upScore * downScore * leftScore * rightScore;
     }
 }
