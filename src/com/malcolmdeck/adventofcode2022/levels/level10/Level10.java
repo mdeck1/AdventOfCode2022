@@ -29,7 +29,7 @@ public class Level10 {
             while (scanner.hasNextLine()) {
 
             }
-            System.out.println("Top Three Calorie Total: " + topThreeCalories);
+            System.out.println(": ");
         } catch (FileNotFoundException e) {
             System.out.println("FileNotFound: " + e.getMessage());
         }
