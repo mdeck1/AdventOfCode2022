@@ -1,0 +1,1 @@
+# Data is in Java class itself - parsing is too hard today.
