@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Level19 {
 
     public static void partOne() throws Exception {
-        File file = FileHelper.getFile("level15\\level15data.txt");
+        File file = FileHelper.getFile("level19\\level19data.txt");
         try {
             Scanner scanner = new Scanner(file);
             while (scanner.hasNextLine()) {
@@ -23,7 +23,7 @@ public class Level19 {
     }
 
     public static void partTwo() throws Exception {
-        File file = FileHelper.getFile("level15\\level15data.txt");
+        File file = FileHelper.getFile("level19\\level19data.txt");
         try {
             Scanner scanner = new Scanner(file);
             while (scanner.hasNextLine()) {
