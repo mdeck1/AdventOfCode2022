@@ -14,6 +14,7 @@ import com.malcolmdeck.adventofcode2022.levels.level19.Level19;
 import com.malcolmdeck.adventofcode2022.levels.level2.Level2;
 import com.malcolmdeck.adventofcode2022.levels.level21.Level21;
 import com.malcolmdeck.adventofcode2022.levels.level22.Level22;
+import com.malcolmdeck.adventofcode2022.levels.level23.Level23;
 import com.malcolmdeck.adventofcode2022.levels.level3.Level3;
 import com.malcolmdeck.adventofcode2022.levels.level4.Level4;
 import com.malcolmdeck.adventofcode2022.levels.level5.Level5;
@@ -25,6 +26,6 @@ import com.malcolmdeck.adventofcode2022.levels.level9.Level9;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        Level22.partTwo();
+        Level23.partOne();
     }
 }
